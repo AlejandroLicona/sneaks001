@@ -1,12 +1,12 @@
 <div class="form-check">
     <label class="form-check-label">
         <input type="checkbox" class="form-check-input" [(ngModel)]="includeShipped" />
-        Display Shipped Orders
+        Display Served Orders
     </label>
 </div>
 <table class="table table-sm">
     <thead>
-        <tr><th>Name</th><th>Zip</th><th colspan="2">Cart</th><th></th></tr>
+        <tr><th>Phone Number</th><th>Nickname</th><th></th><th></th><th colspan="2"></th><th></th></tr>
     </thead>
     <tbody>
         <tr *ngIf="getOrders().length == 0">
@@ -20,7 +20,7 @@
                 <th>Quantity</th>
                 <td>
                     <button class="btn btn-warning" (click)="markShipped(o)">
-                        Ship
+                        Served
                     </button>
                     <button class="btn btn-danger" (click)="delete(o.id)">
                         Delete
@@ -35,3 +35,4 @@
         </ng-template>
     </tbody>
 </table>
+
